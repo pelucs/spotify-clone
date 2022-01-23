@@ -1,0 +1,106 @@
+.home-container{
+  width: 100%;
+  height: calc(100vh + 200px);
+  position: relative;
+
+  background-color: var(--background);
+}
+.circle{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9;
+
+  background-color: var(--destaque);
+}
+.one{
+  clip-path: circle(25vw at right 10%);
+}
+.two{
+  clip-path: circle(15vw at left 5%);
+}
+.three{
+  clip-path: circle(15vw at bottom);
+}
+.mensagem-box{
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  transform: scale(0);
+  transition: .3s;
+
+  border-radius: 5px;
+  background-color: var(--destaque);
+  color: #fff;
+}
+.mensagem-box span{
+  position: absolute;
+  top: 7px;
+  right: 7px;
+
+  font-size: 25px;
+  transition: .3s;
+  cursor: pointer;
+}
+.mensagem-box span:hover{
+  transform: scale(1.1);
+}
+.mensagem-box h1{
+  display: flex;
+  align-items: center;
+
+  font-size: 15px;
+}
+.mensagem-box h1 ion-icon{
+  margin-right: 10px;
+}
+.mensagem-box p{
+  font-size: 13px;
+}
+
+.section{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  z-index: 999;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: var(--destaque);
+}
+.section h1{
+  font-size: 5rem;
+  padding: 0;
+  font-weight: 600;
+  line-height: 100px;
+
+}
+.section p{
+  margin: 30px 0;
+  font-size: 15px;
+}
+.section a{
+  padding: 10px 20px;
+
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--background);
+
+  border-radius: 40px;
+  background-color: var(--destaque);
+
+  display: block;
+  transition: .3s;
+}
+.section a:hover{
+  transform: scale(1.1);
+}

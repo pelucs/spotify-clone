@@ -1,0 +1,130 @@
+.cadastro-container{
+  width: 100%;
+  padding: 30px 0;
+}
+
+.form{
+  width: 50%;
+  height: 100%;
+  padding: 50px 0;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form h1{
+  text-align: center;
+  font-size: 2vw;
+}
+.form > p{
+  display: flex;
+  align-items: center;
+  color: #888;
+}
+.form > p::before,
+.form > p::after{
+  content: "";
+  display: block;
+  margin: 10px;
+  
+  width: 100px;
+  height: 1px;
+
+  background-color: #888;
+}
+.buttons-sociais{
+  display: block;
+
+}
+.buttons-sociais button{
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: .3s;
+  cursor: pointer;
+  outline: none;
+
+  border: 0;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+}
+.buttons-sociais button:hover{
+  transform: scale(.97);
+}
+.buttons-sociais button ion-icon{
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.inputs-box{
+  width: 70%;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+.inputs-box input{
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+
+  border: 2px solid #000;
+  background-color: transparent;
+
+  outline: none;
+  transition: .3s;
+}
+.inputs-box input:focus{
+  border-color: var(--destaque);
+}
+.inputs-box button{
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: .3s;
+  cursor: pointer;
+  outline: none;
+
+  border: 0;
+  border-radius: 30px;
+  background-color: var(--destaque);
+  color: #fff;
+}
+.inputs-box button:hover{
+  transform: scale(.97);
+}
+.inputs-box p{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}
+
+@media screen and (max-width: 850px) {
+  .form{
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px;
+    margin: 0 auto;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form input{
+    width: 100%;
+  }
+}

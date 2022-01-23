@@ -1,0 +1,141 @@
+.header-app-container{
+  width: calc(100% - 80px);
+  height: 80px;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9998;
+  transition: .3s;
+}
+.buttos-nav{
+  display: flex;
+  align-items: center;
+}
+.buttos-nav span{
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+
+  cursor: pointer;
+  transition: .3s;
+}
+.menu-app{
+  display: flex;
+  list-style: none;
+}
+.menu-app li{
+  margin: 0 15px;
+}
+.menu-app li a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+}
+.menu-app li a:hover{
+  color: var(--destaque);
+}
+.profile-box{
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.profile-box ion-icon{
+  margin-right: 7px;
+  font-size: 25px;
+}
+
+.menu-hamb-app{
+  width: 30px;
+  cursor: pointer;
+  display: none;
+  border-top: 2px solid #fff;
+}
+.menu-hamb-app::before,
+.menu-hamb-app::after{
+  content: "";
+  display: block;
+  margin-top: 5px;
+
+  width: 30px;
+  height: 2px;
+
+  transition: .3s;
+  background-color: #fff;
+}
+
+.active-color{
+  height: 50px;
+  background-color: #2A2A2A;
+}
+
+@media screen and (max-width: 900px) {
+  .menu-hamb-app{
+    display: block;
+  }
+  .header-app-container{
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .buttos-nav{
+    display: none;
+  }
+  .menu-app{
+    width: calc(100% - 80px);
+    height: 0;
+
+    position: fixed;
+    top: 50px;
+    right: 0;
+
+    display: block;
+    transition: .3s;
+    visibility: hidden;
+    overflow: hidden;
+
+    background-color: #333;
+  }
+  .menu-app li{
+    margin: 0;
+    padding: 15px 10px;
+    border-bottom: 1px solid #555;
+    transition: .3s;
+  }
+  .menu-app li:hover{
+    background-color: #555;
+  }
+  .menu-app li a{
+    padding: 10px 70% 15px 10px;
+  }
+  .active-menu-app .menu-app{
+    visibility: visible;
+    height: calc(100vh - 50px);
+  }
+  .active-menu-app .menu-hamb-app{
+    border-top-color: transparent;
+  }
+  .active-menu-app .menu-hamb-app::before{
+    transform: rotate(135deg);
+  }
+  .active-menu-app .menu-hamb-app::after{
+    transform: rotate(-135deg);
+    position: relative;
+    top: -7px;
+  }
+}

@@ -1,0 +1,81 @@
+.sidebar{
+  width: 80px;
+  height: 100vh;
+  padding: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: #2A2A2A;
+}
+.logo-sidebar img{
+  width: 40px;
+}
+
+.menu-sidebar{
+  width: 100%;
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-sidebar li{
+  list-style: none;
+  margin: 5px 0;
+}
+.menu-sidebar li a{
+  font-size: 25px;
+  color: #fff;
+}
+#logout{
+  padding: 10px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #333;
+}
+#logout ion-icon{
+  font-size: 25px;
+  color: #fff;
+}
+.modal-logout{
+  width: 270px;
+  padding: 20px 15px;
+
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  transition: .5s;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.modal-logout button{
+  width: 40%;
+  padding: 3px;
+  margin: 0 10px;
+
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--destaque);
+  color: #fff;
+
+  cursor: pointer;
+  outline: none;
+}
+.active-modal-logout{
+  top: 40px;
+}
